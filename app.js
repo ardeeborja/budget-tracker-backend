@@ -1,6 +1,6 @@
 const express = require('express');
 const mongoose = require('mongoose');
-const cors = require('cors');
+// const cors = require('cors');
 
 const port = process.env.PORT || 8000;
 const app = express();
@@ -24,16 +24,16 @@ db.once('open', function () {
 //   optionsSuccessStatus: 200,
 // };
 
-const corsOptions = {
-  origin: 'https://budget-tracker-sandy-five.vercel.app',
-  optionsSuccessStatus: 200,
-};
+// const corsOptions = {
+//   origin: 'https://budget-tracker-sandy-five.vercel.app',
+//   optionsSuccessStatus: 200,
+// };
 
 // middlewares
 app.use(express.json());
 
-app.use(cors());
-app.use(cors(corsOptions));
+// app.use(cors());
+// app.use(cors(corsOptions));
 // app.options('*', cors());
 
 // routes
