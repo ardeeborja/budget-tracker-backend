@@ -8,7 +8,7 @@ require('dotenv').config();
 
 // database connection
 mongoose.connect(process.env.DB, {
-  // useNewUrlParser: true,
+  useNewUrlParser: true,
   useUnifiedTopology: true,
 });
 
@@ -24,17 +24,17 @@ db.once('open', function () {
 //   optionsSuccessStatus: 200,
 // };
 
-// const corsOptions = {
-//   origin: 'https://budget-tracker-sandy-five.vercel.app',
-//   optionsSuccessStatus: 200,
-// };
+const corsOptions = {
+  origin: 'https://budget-tracker-sandy-five.vercel.app',
+  optionsSuccessStatus: 200,
+};
 
 // middlewares
 app.use(express.json());
 
 app.use(cors());
-// app.use(cors(corsOptions));
-app.options('*', cors());
+app.use(cors(corsOptions));
+// app.options('*', cors());
 
 // routes
 const categoryRoutes = require('./routes/category');
