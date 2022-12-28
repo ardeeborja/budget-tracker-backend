@@ -19,15 +19,15 @@ db.once('open', function () {
   console.log(`Connected to database`);
 });
 
-const corsOptions = {
-  origin: 'http://localhost:3000',
-  optionsSuccessStatus: 200,
-};
-
 // const corsOptions = {
-//   origin: 'https://capstone-3-client-borja.vercel.app',
+//   origin: 'http://localhost:3000',
 //   optionsSuccessStatus: 200,
 // };
+
+const corsOptions = {
+  origin: 'https://budget-tracker-sandy-five.vercel.app',
+  optionsSuccessStatus: 200,
+};
 
 // middlewares
 app.use(express.json());
