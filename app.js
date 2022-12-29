@@ -25,7 +25,7 @@ db.once('open', function () {
 // };
 
 const corsOptions = {
-  origin: 'https://budget-tracker-sandy-five.vercel.app/',
+  origin: 'https://budget-tracker-sandy-five.vercel.app',
   optionsSuccessStatus: 200,
 };
 
